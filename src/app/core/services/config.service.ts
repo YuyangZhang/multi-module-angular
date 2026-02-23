@@ -21,7 +21,7 @@ export class ConfigService {
     constructor(private http: HttpClient) { }
 
     loadExternalApps(): Observable<ExternalAppConfig[]> {
-        return this.http.get<ExternalAppConfig[]>('/assets/external-apps.json').pipe(
+        return this.http.get<ExternalAppConfig[]>('/external-apps.json').pipe(
             tap(apps => this.externalApps = apps)
         );
     }
